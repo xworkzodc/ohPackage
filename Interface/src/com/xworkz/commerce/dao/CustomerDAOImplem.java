@@ -45,7 +45,7 @@ public class CustomerDAOImplem implements CustomerDAO{
 	@Override
 	public CustomerDTO findByName(String name) {
 		for(int index=0; index<this.customerDTO.length; index++) {
-		if(this.customerDTO[index]!=null && this.customerDTO[index].getName()) {
+		if(this.customerDTO[index]!=null && this.customerDTO[index].getName().equals(name)) {
 			System.out.println("Customer with name:"+name.toUpperCase());
 			return this.customerDTO[index];
 		}
@@ -53,5 +53,11 @@ public class CustomerDAOImplem implements CustomerDAO{
 		System.err.println("entered name do not match ");
 		return null;
 	}
+	public boolean findDTO(CustomerDTO customerDTO) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	
 
 }

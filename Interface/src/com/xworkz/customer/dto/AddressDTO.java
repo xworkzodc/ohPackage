@@ -17,7 +17,7 @@ public class AddressDTO implements Serializable{
 		}
 
 		public void setId(int id) {
-			if(id>0&&id<100)
+			if(id>0&&id<100000)
 			{
 			this.id = id;
 		}else {
