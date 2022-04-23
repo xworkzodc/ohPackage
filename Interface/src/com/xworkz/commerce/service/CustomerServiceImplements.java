@@ -6,8 +6,7 @@ import com.xworkz.customer.dto.*;
 
 public class CustomerServiceImplements implements CustomerService {
 	private CustomerDAO dao;
-	private Object customerDAO;
-	private Object customerDTO;
+	
 	public CustomerServiceImplements(CustomerDAO dao) {
 	super();
     this.dao=dao;
@@ -99,7 +98,7 @@ return false;
 				System.out.println("not valid street");
 				return false;
 			}
-	boolean found=customerDAO.findDTO(customerDTO);
+	boolean found=dao.findDTO(customerDTO);
 	if(found)
 			{
 		System.out.println("cannot be added");
@@ -108,7 +107,7 @@ return false;
 	else
 	{
 		System.out.println("customer details not correct");
-		customerDAO.save(customerDTO);
+		dao.save(customerDTO);
 		return true;
 	}
 	
